@@ -47,7 +47,7 @@ const ContactPage = () => {
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="absolute inset-0 bg-[url('/contactbg.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('images/contactbg.jpg')] bg-cover bg-center opacity-20"></div>
 
         {/* Background Circles */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-[#e0b56f]/15 rounded-full"></div>

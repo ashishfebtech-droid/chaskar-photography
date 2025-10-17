@@ -2,17 +2,17 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaYoutube, 
 
 const Footer = () => {
   const galleryImages = [
-    { src: "/Bridal.JPG", alt: "Gallery 1" },
-    { src: "/DSC07986.JPG", alt: "Gallery 2" },
-    { src: "/Prewed1.JPG", alt: "Gallery 3" },
-    { src: "/Prewed2.JPG", alt: "Gallery 4" },
-    { src: "/Prewed3.JPG", alt: "Gallery 5" },
-    { src: "/Prewed4.JPG", alt: "Gallery 6" }
+    { src: "images/Bridal.JPG", alt: "Gallery 1" },
+    { src: "images/DSC07986.JPG", alt: "Gallery 2" },
+    { src: "images/Prewed1.JPG", alt: "Gallery 3" },
+    { src: "images/Prewed2.JPG", alt: "Gallery 4" },
+    { src: "images/Prewed3.JPG", alt: "Gallery 5" },
+    { src: "images/Prewed4.JPG", alt: "Gallery 6" }
   ];
 
   return (
     <footer className="relative bg-cover bg-center text-white z-10" role="contentinfo" 
-      style={{backgroundImage: "url('public/bg.jpg')"}}>
+      style={{backgroundImage: "url('images/bg.jpg')"}}>
       
       {/* Dark Overlay - Background image ki opacity kam karne ke liye */}
       <div className="absolute inset-0 bg-black/80 z-0"></div>
@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="logo mb-2">
               <a href="/" aria-label="Chaskar Photography Home">
                 <img
-                  src="/logo.png"
+                  src="images/logo.png"
                   alt="Chaskar Photography Logo"
                   width="100"
                   height="100"

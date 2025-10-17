@@ -53,7 +53,7 @@ const AboutSection = () => {
             {/* Main Image */}
             <div className="relative group">
               <img
-                src="/about.jpg"
+                src="images/about.jpg"
                 alt="Chaskar Photography in action"
                 className="w-full h-[500px] object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 transition-transform duration-700"
               />

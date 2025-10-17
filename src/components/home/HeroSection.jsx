@@ -8,17 +8,17 @@ const HeroSection = () => {
   const autoPlayIntervalRef = useRef(null);
 
   const imagesData = [
-    "/Prewed6.JPG",
-    "/DSC07986.JPG",
-    "/Bridal.JPG",
-    "/Prewed3.JPG",
-    "/Prewed7.JPG",
-    "/tour.JPG",
-    "/Prewed1.JPG",
-    "/Groom.JPG",
-    "/Prewed2.JPG",
-    "/Prewed4.JPG",
-    "/Prewed5.JPG",
+    "images/Prewed6.JPG",
+    "images/DSC07986.JPG",
+    "images/Bridal.JPG",
+    "images/Prewed3.JPG",
+    "images/Prewed7.JPG",
+    "images/tour.JPG",
+    "images/Prewed1.JPG",
+    "images/Groom.JPG",
+    "images/Prewed2.JPG",
+    "images/Prewed4.JPG",
+    "images/Prewed5.JPG",
   ];
 
   // Check mobile screen and initialize animations
@@ -122,7 +122,7 @@ const HeroSection = () => {
         >
           <div className="w-60 h-60 md:w-52 md:h-52 rounded-full bg-black border-8 border-[#e0b56f]/30 shadow-xl shadow-[#e0b56f]/20 flex items-center justify-center overflow-hidden">
             <img
-              src="public/CHAKAR LOGO.png"
+              src="images/CHAKAR LOGO.png"
               alt="Chaskar Photography Logo"
               className="w-full h-full object-cover"
             />

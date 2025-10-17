@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   FaBars,
   FaTimes,
@@ -51,7 +52,7 @@ function Header() {
   ];
 
   // Camera logo
-  const cameraLogo = "/logo.png";
+  const cameraLogo = "images/logo.png";
 
   return (
     <>
@@ -72,7 +73,7 @@ function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logo */}
-          <a href="#home" className="flex items-center group">
+          <Link to="/" className="flex items-center group">
             {/* Camera Logo */}
             <div className="transition-transform duration-300 group-hover:scale-110">
               <img
@@ -90,14 +91,14 @@ function Header() {
                 style={{ color: "#e0b56f" }}
               />
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex gap-1 xl:gap-2">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="group relative px-3 xl:px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
                 style={{
                   transition: "all 0.3s ease",
@@ -117,14 +118,14 @@ function Header() {
                   className="absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/4"
                   style={{ backgroundColor: "#e0b56f" }}
                 ></span>
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* CTA Button (desktop) */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="px-8 py-3 rounded-full font-bold text-base transition-all duration-300 hover:scale-105 shadow-lg text-black"
               style={{
                 background: "linear-gradient(to right, #e0b56f, #d4a055)",
@@ -144,7 +145,7 @@ function Header() {
               }}
             >
               Book Now
-            </a>
+            </Link>
           </div>
 
           {/* Hamburger Button (mobile) */}
@@ -213,9 +214,9 @@ function Header() {
         {/* Navigation Links */}
         <nav className="flex flex-col p-4 gap-2 flex-1 overflow-y-auto">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               onClick={closeMobileMenu}
               className="p-4 rounded-lg backdrop-blur-sm text-white font-medium transition-all duration-200"
               style={{
@@ -236,7 +237,7 @@ function Header() {
               }}
             >
               {item.name.toUpperCase()}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -248,8 +249,8 @@ function Header() {
             backgroundColor: "rgba(255, 255, 255, 0.05)",
           }}
         >
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             onClick={closeMobileMenu}
             className="block w-full px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-center mb-4 text-black"
             style={{
@@ -258,7 +259,7 @@ function Header() {
             }}
           >
             Book Your Session
-          </a>
+          </Link>
 
           <p className="text-gray-300 text-sm mb-3 text-center font-medium">
             <FaCamera className="inline mr-2" style={{ color: "#e0b56f" }} />

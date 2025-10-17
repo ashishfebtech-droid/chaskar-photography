@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ashishfebtech-droid/chaskar-photography",
+  "homepage": "https://ashishfebtech-droid.github.io/chaskar-photography",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

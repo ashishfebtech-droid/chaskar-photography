@@ -145,10 +145,20 @@ const HeroSection = () => {
             creating timeless memories that speak to the soul.
           </p>
 
-          <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-gray-900">
-            <span className="relative z-10">View My Work</span>
-            <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-          </button>
+          {/* BUTTONS GROUP - Yahan change kiya hai */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* View My Work Button */}
+            <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-gray-900 w-full sm:w-auto">
+              <span className="relative z-10">View My Work</span>
+              <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+            </button>
+
+            {/* Get in Touch Button - NAYA BUTTON */}
+            <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-[#e0b56f] border-2 border-[#e0b56f] text-gray-900 rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-[#e0b56f] w-full sm:w-auto">
+              <span className="relative z-10">Get in Touch</span>
+              <div className="absolute inset-0 bg-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+            </button>
+          </div>
         </div>
       </section>
 

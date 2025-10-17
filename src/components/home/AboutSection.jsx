@@ -92,7 +92,7 @@ const AboutSection = () => {
             {/* Description */}
             <div className="space-y-4 text-gray-300 text-lg leading-relaxed text-justify">
               <p>
-                I don't just take photos—I capture emotions, preserve memories,
+                I don't just take photos, I capture emotions, preserve memories,
                 and tell stories that last generations. With a passion for
                 authenticity and an eye for the extraordinary in the ordinary.
               </p>

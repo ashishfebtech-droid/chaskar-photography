@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tumhara-username.github.io/chaskar-photography",
+  "homepage": "https://ashishfebtech-droid/chaskar-photography",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

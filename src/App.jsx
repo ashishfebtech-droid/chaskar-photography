@@ -1,4 +1,4 @@
-﻿import { BrowserRouter, Routes, Route } from "react-router-dom";
+﻿import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -10,7 +10,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
       </Routes>
       <Footer />
       <WhatsAppButton />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

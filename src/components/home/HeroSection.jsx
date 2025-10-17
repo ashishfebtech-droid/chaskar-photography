@@ -111,7 +111,7 @@ const HeroSection = () => {
     <div className="relative">
       {/* Hero Content */}
       <section
-        className={`min-h-screen flex flex-col items-center justify-center px-4 md:px-5 py-16 md:py-24 bg-transparent relative z-10 transition-all duration-1000 ${
+        className={`min-h-screen flex flex-col items-center justify-center px-4 md:px-5 pt-32 sm:pt-24 md:pt-24 pb-16 md:pb-24 bg-transparent relative z-10 transition-all duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -154,7 +154,7 @@ const HeroSection = () => {
 
       {/* Carousel Section */}
       <section
-        className={`min-h-[70vh] px-5 py-20 bg-transparent flex flex-col items-center justify-center relative z-10 overflow-hidden transform transition-all duration-1000 delay-700 ${
+        className={`px-5 py-8 bg-transparent flex flex-col items-center justify-center relative z-10 overflow-hidden transform transition-all duration-1000 delay-700 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
         id="gallery"
@@ -169,9 +169,10 @@ const HeroSection = () => {
               // Mobile Single Column Carousel
               <div className="relative w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl">
                 <img
+                  key={currentIndex}
                   src={imagesData[currentIndex]}
                   alt={`Photography ${currentIndex + 1}`}
-                  className="w-full h-full object-cover transition-all duration-600"
+                  className="w-full h-full object-cover animate-fadeIn"
                 />
                 <div className="absolute inset-4 border-2 border-white/80 rounded-xl shadow-inner pointer-events-none animate-pulse-slow"></div>
               </div>
@@ -254,6 +255,17 @@ const HeroSection = () => {
         }
         .animate-pulse-slow {
           animation: pulse-slow 3s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.4s ease-in-out;
         }
       `}</style>
     </div>

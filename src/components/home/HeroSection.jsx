@@ -111,16 +111,16 @@ const HeroSection = () => {
     <div className="relative">
       {/* Hero Content */}
       <section
-        className={`min-h-screen flex flex-col items-center justify-center px-5 py-16 md:py-24 bg-transparent relative z-10 sm:pb-0 transition-all duration-1000 ${
+        className={`min-h-screen flex flex-col items-center justify-center px-4 md:px-5 py-16 md:py-24 bg-transparent relative z-10 transition-all duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         <div
-          className={`mb-10 transform transition-all duration-1000 delay-300 ${
+          className={`mb-8 md:mb-10 transform transition-all duration-1000 delay-300 ${
             isVisible ? "translate-y-0" : "translate-y-10"
           }`}
         >
-          <div className="w-60 h-60 md:w-52 md:h-52 rounded-full bg-black border-8 border-[#e0b56f]/30 shadow-xl shadow-[#e0b56f]/20 flex items-center justify-center overflow-hidden">
+          <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full bg-black border-4 sm:border-6 md:border-8 border-[#e0b56f]/30 shadow-xl shadow-[#e0b56f]/20 flex items-center justify-center overflow-hidden">
             <img
               src="images/CHAKAR LOGO.png"
               alt="Chaskar Photography Logo"
@@ -130,22 +130,22 @@ const HeroSection = () => {
         </div>
 
         <div
-          className={`text-center max-w-4xl transform transition-all duration-1000 delay-500 ${
+          className={`text-center max-w-4xl px-2 transform transition-all duration-1000 delay-500 ${
             isVisible ? "translate-y-0" : "translate-y-10"
           }`}
         >
-          <h1 className="text-4xl md:text-6xl mb-8 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-6xl mb-4 md:mb-8 leading-tight">
             <span className="italic text-white">Hello,</span>
             <span className="text-[#e0b56f] font-bold"> I am Chaskar!</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/85 leading-relaxed mb-8 md:mb-12">
+          <p className="text-sm sm:text-base md:text-xl text-white/85 leading-relaxed mb-6 md:mb-12">
             I believe every moment tells a story. My photography captures the
             essence of life through the lens of authenticity and artistry,
             creating timeless memories that speak to the soul.
           </p>
 
-          <button className="group relative px-8 py-4 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:text-gray-900">
+          <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-gray-900">
             <span className="relative z-10">View My Work</span>
             <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
           </button>
@@ -160,52 +160,24 @@ const HeroSection = () => {
         id="gallery"
       >
         <div
-          className="relative w-full max-w-7xl h-[500px] flex items-center justify-center py-16 overflow-visible"
+          className="relative w-full max-w-7xl h-[500px] flex items-center justify-center p-0 overflow-visible"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
           <div className="relative w-full h-full flex items-center justify-center overflow-visible">
-            {imagesData.map((imgSrc, index) => {
-              if (isMobile) {
-                // Mobile layout
-                let positionClass = "opacity-0 pointer-events-none";
-
-                if (index === currentIndex) {
-                  positionClass =
-                    "left-1/2 -translate-x-1/2 scale-110 opacity-100 z-30 brightness-100 w-[360px] h-[480px]";
-                } else if (
-                  index ===
-                  (currentIndex - 1 + imagesData.length) % imagesData.length
-                ) {
-                  positionClass =
-                    "left-1/4 -translate-x-1/2 scale-85 opacity-70 z-20 brightness-80";
-                } else if (index === (currentIndex + 1) % imagesData.length) {
-                  positionClass =
-                    "left-3/4 -translate-x-1/2 scale-85 opacity-70 z-20 brightness-80";
-                }
-
-                return (
-                  <div
-                    key={index}
-                    className={`absolute w-72 h-96 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-600 ${positionClass}`}
-                    onClick={() => {
-                      handleManualInteraction();
-                      setCurrentIndex(index);
-                    }}
-                  >
-                    <img
-                      src={imgSrc}
-                      alt={`Photography ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                    {/* Inner Border for Focus Image */}
-                    {index === currentIndex && (
-                      <div className="absolute inset-4 border-5 border-[#e0b56f] rounded-xl shadow-inner pointer-events-none"></div>
-                    )}
-                  </div>
-                );
-              } else {
-                // Desktop layout
+            {isMobile ? (
+              // Mobile Single Column Carousel
+              <div className="relative w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={imagesData[currentIndex]}
+                  alt={`Photography ${currentIndex + 1}`}
+                  className="w-full h-full object-cover transition-all duration-600"
+                />
+                <div className="absolute inset-4 border-2 border-white/80 rounded-xl shadow-inner pointer-events-none animate-pulse-slow"></div>
+              </div>
+            ) : (
+              // Desktop Multi-Image Carousel
+              imagesData.map((imgSrc, index) => {
                 const pos = getItemPosition(index);
                 let positionClass = "opacity-0 pointer-events-none";
 
@@ -245,20 +217,20 @@ const HeroSection = () => {
                     )}
                   </div>
                 );
-              }
-            })}
+              })
+            )}
           </div>
         </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center gap-3 mt-10">
+        {/* Dots Indicator - Always visible */}
+        <div className="flex justify-center gap-2 sm:gap-3 mt-8 sm:mt-10 flex-wrap">
           {imagesData.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                 index === currentIndex
                   ? "bg-[#e0b56f] scale-125"
-                  : "bg-white/30"
+                  : "bg-white/30 hover:bg-white/50"
               }`}
               onClick={() => {
                 handleManualInteraction();

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FaBullseye, FaEye, FaHeart, FaInstagram, FaFacebook, FaTwitter, FaQuoteLeft } from 'react-icons/fa';
-import { RiWhatsappFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+import { FaBullseye, FaEye, FaHeart, FaQuoteLeft } from 'react-icons/fa';
 
 const AboutPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,9 +74,14 @@ const AboutPage = () => {
     }
   ];
 
+  const missionDelays = ['delay-500', 'delay-600', 'delay-700'];
+  const teamDelays = ['delay-900', 'delay-1000', 'delay-1100'];
+  const timelineDelays = ['delay-1300', 'delay-1400', 'delay-1500', 'delay-1600', 'delay-1700'];
+  const testimonialDelays = ['delay-1900', 'delay-2000', 'delay-2100'];
+
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* About Hero Section - Same as Portfolio */}
+      {/* About Hero Section */}
       <section className={`relative py-24 flex items-center justify-center bg-gradient-to-r from-black via-black/90 to-black/80 overflow-hidden pt-40 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=1200&h=800&fit=crop')] bg-cover bg-center opacity-20"></div>
         
@@ -86,16 +91,16 @@ const AboutPage = () => {
         <div className="absolute top-1/2 left-10 w-12 h-12 bg-purple-500/10 rounded-full"></div>
         
         <div className={`text-center z-10 px-5 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#e0b56f]/10 border border-[#e0b56f]/30 rounded-full mb-6 animate-fadeInDown">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#e0b56f]/10 border border-[#e0b56f]/30 rounded-full mb-6">
             <div className="w-2 h-2 bg-[#e0b56f] rounded-full"></div>
             <span className="text-[#e0b56f] text-sm font-semibold tracking-wider">OUR STORY</span>
           </div>
           
-          <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-fadeInUp">
+          <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             About <span className="text-[#e0b56f]">Us</span>
           </h1>
           
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fadeInUp">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Capturing life's most precious moments since 2010
           </p>
         </div>
@@ -108,7 +113,7 @@ const AboutPage = () => {
             {missionVision.map((item, index) => (
               <div 
                 key={index}
-                className={`bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:border-[#e0b56f] hover:transform hover:-translate-y-2 transition-all duration-500 transform transition-all duration-700 delay-${500 + index * 100} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                className={`bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:border-[#e0b56f] hover:transform hover:-translate-y-2 transition-all duration-700 ${missionDelays[index]} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
               >
                 <div className="w-16 h-16 bg-[#e0b56f]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="text-3xl text-[#e0b56f]" />
@@ -141,7 +146,7 @@ const AboutPage = () => {
             {teamMembers.map((member, index) => (
               <div 
                 key={index}
-                className={`bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#e0b56f] hover:transform hover:-translate-y-2 transition-all duration-500 transform transition-all duration-700 delay-${900 + index * 100} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                className={`bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#e0b56f] hover:transform hover:-translate-y-2 transition-all duration-700 ${teamDelays[index]} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
               >
                 <div className="h-80 overflow-hidden">
                   <img 
@@ -178,7 +183,7 @@ const AboutPage = () => {
             {timeline.map((item, index) => (
               <div 
                 key={index}
-                className={`flex items-start gap-6 transform transition-all duration-700 delay-${1300 + index * 100} ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
+                className={`flex items-start gap-6 transform transition-all duration-700 ${timelineDelays[index]} ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
               >
                 <div className="flex-shrink-0 w-20 h-20 bg-[#e0b56f] text-black rounded-2xl flex items-center justify-center font-bold text-lg">
                   {item.year}
@@ -210,7 +215,7 @@ const AboutPage = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className={`bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#e0b56f] transition-all duration-500 transform transition-all duration-700 delay-${1900 + index * 100} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                className={`bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#e0b56f] transition-all duration-700 ${testimonialDelays[index]} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
               >
                 <FaQuoteLeft className="text-4xl text-[#e0b56f] mb-6 opacity-50" />
                 <p className="text-gray-300 italic text-lg leading-relaxed mb-6">
@@ -237,23 +242,22 @@ const AboutPage = () => {
               Let's discuss your photography needs and create something extraordinary together
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact"
+              <Link 
+                to="/contact"
                 className="bg-[#e0b56f] text-black font-bold px-8 py-4 rounded-xl hover:bg-[#d4a574] transition-all duration-300 transform hover:scale-105"
               >
                 Get In Touch
-              </a>
-              <a 
-                href="/portfolio"
+              </Link>
+              <Link 
+                to="/portfolio"
                 className="bg-white/10 text-white font-bold px-8 py-4 rounded-xl border border-white/20 hover:border-[#e0b56f] hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
               >
                 View Portfolio
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

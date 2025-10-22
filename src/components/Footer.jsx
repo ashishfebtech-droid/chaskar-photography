@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaAngleRight } from 'react-icons/fa';
 
 const Footer = () => {
@@ -24,7 +25,7 @@ const Footer = () => {
           <div className="footer-left flex-1 lg:flex-[0_0_40%] xl:flex-[0_0_35%] flex flex-col gap-6 lg:pr-6">
             {/* Logo */}
             <div className="logo mb-2">
-              <a href="/" aria-label="Chaskar Photography Home">
+              <Link to="/" aria-label="Chaskar Photography Home">
                 <img
                   src="images/logo.png"
                   alt="Chaskar Photography Logo"
@@ -33,7 +34,7 @@ const Footer = () => {
                   loading="lazy"
                   className="object-cover"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Paragraph */}
@@ -116,10 +117,10 @@ const Footer = () => {
               <div className="footer-links-column">
                 <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#e0b56f]/30">Explore Us</h3>
                 <ul className="flex flex-col gap-2 lg:gap-3 list-none">
-                  <li><a href="/" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Home</a></li>
-                  <li><a href="/about" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> About Us</a></li>
-                  <li><a href="/services" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Service</a></li>
-                  <li><a href="/portfolio" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Portfolio</a></li>
+                  <li><Link to="/" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Home</Link></li>
+                  <li><Link to="/about" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> About Us</Link></li>
+                  <li><Link to="/services" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Service</Link></li>
+                  <li><Link to="/portfolio" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Portfolio</Link></li>
                 </ul>
               </div>
 
@@ -127,10 +128,10 @@ const Footer = () => {
               <div className="footer-links-column">
                 <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#e0b56f]/30">Support</h3>
                 <ul className="flex flex-col gap-2 lg:gap-3 list-none">
-                  <li><a href="/privacy" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Privacy Policy</a></li>
-                  <li><a href="/faq" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> FAQ</a></li>
-                  <li><a href="/terms" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Terms & Conditions</a></li>
-                  <li><a href="/contact" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Contact Us</a></li>
+                  <li><Link to="/privacy" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Privacy Policy</Link></li>
+                  <li><Link to="/faq" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> FAQ</Link></li>
+                  <li><Link to="/terms" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Terms & Conditions</Link></li>
+                  <li><Link to="/contact" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Contact Us</Link></li>
                 </ul>
               </div>
 

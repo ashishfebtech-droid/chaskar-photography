@@ -11,7 +11,7 @@ const ServicesSection = () => {
       title: "Wedding Shoot",
       description:
         "Capturing your special day with artistic storytelling, from intimate moments to grand celebrations. Every emotion preserved forever.",
-      image: "/images/Bridal.JPG",
+      image: "images/Bridal.JPG",
     },
     {
       icon: <FaBirthdayCake className="text-5xl" />,
@@ -26,14 +26,14 @@ const ServicesSection = () => {
       title: "Product Shoot",
       description:
         "Professional product photography that makes your items shine. Perfect for e-commerce, catalogs, and marketing materials.",
-      image: "/images/Productphotoshoot.jpg",
+      image: "images/Productphotoshoot.jpg",
     },
     {
       icon: <FaTshirt className="text-5xl" />,
       title: "Fashion Shoot",
       description:
         "Creative fashion photography for brands, models, and designers. Bringing style and clothing to life through stunning visuals.",
-      image: "/images/fashionphotography.jpg",
+      image: "images/fashionphotography.jpg",
     },
   ];
 

@@ -1,4 +1,5 @@
 ﻿import { HashRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -11,6 +12,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

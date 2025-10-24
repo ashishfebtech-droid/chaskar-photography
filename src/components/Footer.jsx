@@ -12,15 +12,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-cover bg-center text-white z-10" role="contentinfo" 
-      style={{backgroundImage: "url('images/bg.jpg')"}}>
+    <footer className="relative bg-gray-900 text-white z-10" role="contentinfo">
       
-      {/* Dark Overlay - Background image ki opacity kam karne ke liye */}
-      <div className="absolute inset-0 bg-black/80 z-0"></div>
-
       {/* Container 1 */}
       <div className="footer-container-1 py-16 w-full relative z-10">
-        <div className="footer-inner-wrapper max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-8 lg:gap-0 w-full">
+        <div className="footer-inner-wrapper max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row gap-8 lg:gap-0 w-full">
           {/* Left - Fixed padding */}
           <div className="footer-left flex-1 lg:flex-[0_0_40%] xl:flex-[0_0_35%] flex flex-col gap-6 lg:pr-6">
             {/* Logo */}
@@ -67,26 +63,26 @@ const Footer = () => {
             {/* Contact Cards */}
             <div className="footer-right-top grid md:grid-cols-3 gap-4 lg:gap-6">
               {/* Email */}
-              <a href="mailto:Vineechaskar@gmail.com" className="contact-item flex flex-col gap-3 no-underline group p-4 lg:p-5 bg-white/10 rounded-xl border border-white/20 hover:border-[#e0b56f]/50 transition-all duration-300">
-                <div className="contact-icon w-10 h-10 lg:w-12 lg:h-12 bg-[#e0b56f]/20 rounded-lg flex items-center justify-center text-[#e0b56f] text-lg lg:text-xl transition-all duration-300 group-hover:bg-[#e0b56f]/30 group-hover:-translate-y-1">
+              <a href="mailto:Vineechaskar@gmail.com" className="contact-item flex flex-col gap-3 no-underline group p-4 lg:p-5 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#ff7f50]/50 transition-all duration-300">
+                <div className="contact-icon w-10 h-10 lg:w-12 lg:h-12 bg-[#ff7f50]/20 rounded-lg flex items-center justify-center text-[#ff7f50] text-lg lg:text-xl transition-all duration-300 group-hover:bg-[#ff7f50]/30 group-hover:-translate-y-1">
                   <FaEnvelope />
                 </div>
                 <div>
                   <div className="contact-label text-white text-sm lg:text-base font-medium mb-1">Email Address</div>
-                  <div className="contact-value text-gray-200 text-xs lg:text-sm group-hover:text-[#e0b56f] transition-colors duration-300 break-words">
+                  <div className="contact-value text-gray-200 text-xs lg:text-sm group-hover:text-[#ff7f50] transition-colors duration-300 break-words">
                     Vineechaskar@gmail.com
                   </div>
                 </div>
               </a>
 
               {/* Telephone */}
-              <a href="tel:+919557867881" className="contact-item flex flex-col gap-3 no-underline group p-4 lg:p-5 bg-white/10 rounded-xl border border-white/20 hover:border-[#e0b56f]/50 transition-all duration-300">
-                <div className="contact-icon w-10 h-10 lg:w-12 lg:h-12 bg-[#e0b56f]/20 rounded-lg flex items-center justify-center text-[#e0b56f] text-lg lg:text-xl transition-all duration-300 group-hover:bg-[#e0b56f]/30 group-hover:-translate-y-1">
+              <a href="tel:+919557867881" className="contact-item flex flex-col gap-3 no-underline group p-4 lg:p-5 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#ff7f50]/50 transition-all duration-300">
+                <div className="contact-icon w-10 h-10 lg:w-12 lg:h-12 bg-[#ff7f50]/20 rounded-lg flex items-center justify-center text-[#ff7f50] text-lg lg:text-xl transition-all duration-300 group-hover:bg-[#ff7f50]/30 group-hover:-translate-y-1">
                   <FaPhone />
                 </div>
                 <div>
                   <div className="contact-label text-white text-sm lg:text-base font-medium mb-1">Telephone</div>
-                  <div className="contact-value text-gray-200 text-xs lg:text-sm group-hover:text-[#e0b56f] transition-colors duration-300">
+                  <div className="contact-value text-gray-200 text-xs lg:text-sm group-hover:text-[#ff7f50] transition-colors duration-300">
                     +91 9557867881
                   </div>
                 </div>
@@ -97,14 +93,14 @@ const Footer = () => {
                 href="https://maps.app.goo.gl/y3415g6wfBZBuRnp9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-item flex flex-col gap-3 no-underline group p-4 lg:p-5 bg-white/10 rounded-xl border border-white/20 hover:border-[#e0b56f]/50 transition-all duration-300"
+                className="contact-item flex flex-col gap-3 no-underline group p-4 lg:p-5 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#ff7f50]/50 transition-all duration-300"
               >
-                <div className="contact-icon w-10 h-10 lg:w-12 lg:h-12 bg-[#e0b56f]/20 rounded-lg flex items-center justify-center text-[#e0b56f] text-lg lg:text-xl transition-all duration-300 group-hover:bg-[#e0b56f]/30 group-hover:-translate-y-1">
+                <div className="contact-icon w-10 h-10 lg:w-12 lg:h-12 bg-[#ff7f50]/20 rounded-lg flex items-center justify-center text-[#ff7f50] text-lg lg:text-xl transition-all duration-300 group-hover:bg-[#ff7f50]/30 group-hover:-translate-y-1">
                   <FaMapMarkerAlt />
                 </div>
                 <div>
                   <div className="contact-label text-white text-sm lg:text-base font-medium mb-1">Our Location</div>
-                  <div className="contact-value text-gray-200 text-xs lg:text-sm group-hover:text-[#e0b56f] transition-colors duration-300 line-clamp-3">
+                  <div className="contact-value text-gray-200 text-xs lg:text-sm group-hover:text-[#ff7f50] transition-colors duration-300 line-clamp-3">
                     Mahila MahaVidhyalaya PG College, Behind Shakti Kunj, Krishna Nagar, Jagjeetpur-249404
                   </div>
                 </div>
@@ -115,50 +111,50 @@ const Footer = () => {
             <div className="footer-right-bottom grid md:grid-cols-3 gap-6 lg:gap-8">
               {/* Column 1 */}
               <div className="footer-links-column">
-                <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#e0b56f]/30">Explore Us</h3>
+                <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#ff7f50]/30">Explore Us</h3>
                 <ul className="flex flex-col gap-2 lg:gap-3 list-none">
-                  <li><Link to="/" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Home</Link></li>
-                  <li><Link to="/about" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> About Us</Link></li>
-                  <li><Link to="/services" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Service</Link></li>
-                  <li><Link to="/portfolio" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Portfolio</Link></li>
+                  <li><Link to="/" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Home</Link></li>
+                  <li><Link to="/about" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> About Us</Link></li>
+                  <li><Link to="/services" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Service</Link></li>
+                  <li><Link to="/portfolio" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Portfolio</Link></li>
                 </ul>
               </div>
 
               {/* Column 2 */}
               <div className="footer-links-column">
-                <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#e0b56f]/30">Support</h3>
+                <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#ff7f50]/30">Support</h3>
                 <ul className="flex flex-col gap-2 lg:gap-3 list-none">
-                  <li><Link to="/privacy" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Privacy Policy</Link></li>
-                  <li><Link to="/faq" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> FAQ</Link></li>
-                  <li><Link to="/terms" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Terms & Conditions</Link></li>
-                  <li><Link to="/contact" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#e0b56f] flex items-center gap-2 group"><FaAngleRight className="text-[#e0b56f] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Contact Us</Link></li>
+                  <li><Link to="/privacy" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Privacy Policy</Link></li>
+                  <li><Link to="/faq" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> FAQ</Link></li>
+                  <li><Link to="/terms" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Terms & Conditions</Link></li>
+                  <li><Link to="/contact" className="text-gray-200 no-underline text-xs lg:text-sm transition-colors duration-300 hover:text-[#ff7f50] flex items-center gap-2 group"><FaAngleRight className="text-[#ff7f50] text-xs transition-transform duration-300 group-hover:translate-x-1" /> Contact Us</Link></li>
                 </ul>
               </div>
 
               {/* Column 3 - Social Media with Icons */}
               <div className="footer-links-column">
-                <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#e0b56f]/30">Follow Us</h3>
+                <h3 className="text-white text-base lg:text-lg font-semibold mb-3 lg:mb-4 pb-2 border-b border-[#ff7f50]/30">Follow Us</h3>
                 <div className="social-links flex flex-col gap-2 lg:gap-3">
-                  <a href="https://www.facebook.com/chaskarphoto" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#e0b56f] group">
-                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#e0b56f]/20 transition-colors duration-300">
+                  <a href="https://www.facebook.com/chaskarphoto" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#ff7f50] group">
+                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-[#ff7f50]/20 transition-colors duration-300">
                       <FaFacebook className="w-3 h-3 lg:w-4 lg:h-4" />
                     </div>
                     <span className="text-xs lg:text-sm">Facebook</span>
                   </a>
-                  <a href="https://x.com/vineetchaskar1" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#e0b56f] group">
-                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#e0b56f]/20 transition-colors duration-300">
+                  <a href="https://x.com/vineetchaskar1" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#ff7f50] group">
+                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-[#ff7f50]/20 transition-colors duration-300">
                       <FaTwitter className="w-3 h-3 lg:w-4 lg:h-4" />
                     </div>
                     <span className="text-xs lg:text-sm">X Twitter</span>
                   </a>
-                  <a href="https://www.youtube.com/@chaskarphotography1541/videos" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#e0b56f] group">
-                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#e0b56f]/20 transition-colors duration-300">
+                  <a href="https://www.youtube.com/@chaskarphotography1541/videos" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#ff7f50] group">
+                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-[#ff7f50]/20 transition-colors duration-300">
                       <FaYoutube className="w-3 h-3 lg:w-4 lg:h-4" />
                     </div>
                     <span className="text-xs lg:text-sm">YouTube</span>
                   </a>
-                  <a href="https://www.instagram.com/chaskar.photography._/#" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#e0b56f] group">
-                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#e0b56f]/20 transition-colors duration-300">
+                  <a href="https://www.instagram.com/chaskar.photography._/#" className="flex items-center gap-3 text-gray-200 no-underline transition-all duration-300 hover:text-[#ff7f50] group">
+                    <div className="w-8 h-8 lg:w-9 lg:h-9 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-[#ff7f50]/20 transition-colors duration-300">
                       <FaInstagram className="w-3 h-3 lg:w-4 lg:h-4" />
                     </div>
                     <span className="text-xs lg:text-sm">Instagram</span>
@@ -171,9 +167,9 @@ const Footer = () => {
       </div>
 
       {/* Container 2 */}
-      <div className="footer-container-2 bg-[#e0b56f] py-5 relative z-10">
-        <div className="footer-bottom-content max-w-7xl mx-auto px-6 flex justify-center items-center">
-          <p className="copyright text-gray-900 text-sm font-medium m-0 text-center">
+      <div className="footer-container-2 bg-[#ff7f50] py-5 relative z-10">
+        <div className="footer-bottom-content max-w-7xl mx-auto px-4 md:px-6 flex justify-center items-center">
+          <p className="copyright text-white text-sm font-medium m-0 text-center">
             © 2025 Chaskar Photography. All rights reserved.
           </p>
         </div>

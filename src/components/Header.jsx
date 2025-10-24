@@ -51,7 +51,6 @@ function Header() {
     { name: "Contact", href: "/contact" },
   ];
 
-  // Camera logo
   const cameraLogo = "images/logo.png";
 
   return (
@@ -60,64 +59,46 @@ function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-black/90 backdrop-blur-md shadow-lg py-3"
+            ? "bg-white/90 backdrop-blur-md shadow-xl py-3"
             : "bg-transparent py-5"
         } ${
           showHeader
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"
         }`}
-        style={
-          isScrolled ? { boxShadow: "0 4px 20px rgba(224, 181, 111, 0.1)" } : {}
-        }
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            {/* Camera Logo */}
             <div className="transition-transform duration-300 group-hover:scale-110">
               <img
                 src={cameraLogo}
                 alt="Chaskar Photography"
-                className="w-20 h-20 object-contain"
+                className="w-20 h-20 object-contain drop-shadow-lg"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
                 }}
               />
-              {/* Fallback icon */}
               <FaCamera
-                className="text-4xl hidden"
-                style={{ color: "#e0b56f" }}
+                className="text-4xl hidden text-[#ff7f50]"
               />
             </div>
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Nav - Only Border Effect Changed */}
           <nav className="hidden lg:flex gap-1 xl:gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className="group relative px-3 xl:px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
-                style={{
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor =
-                    "rgba(224, 181, 111, 0.1)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                }}
+                className="group relative px-3 xl:px-4 py-2 font-medium text-gray-700 rounded-xl transition-all duration-300 hover:text-gray-900"
               >
-                <span className="text-base font-semibold uppercase tracking-wide">
+                <span className="text-sm font-semibold uppercase tracking-wide">
                   {item.name}
                 </span>
-                <span
-                  className="absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/4"
-                  style={{ backgroundColor: "#e0b56f" }}
-                ></span>
+                {/* Border Effect - Improved */}
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#ff6666] via-[#ff7f50] to-[#ffcc66] transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/4 rounded-full"></span>
               </Link>
             ))}
           </nav>
@@ -126,31 +107,16 @@ function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-3 rounded-full font-bold text-base transition-all duration-300 hover:scale-105 shadow-lg text-black"
-              style={{
-                background: "linear-gradient(to right, #e0b56f, #d4a055)",
-                boxShadow: "0 4px 15px rgba(224, 181, 111, 0.3)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background =
-                  "linear-gradient(to right, #d4a055, #c89540)";
-                e.currentTarget.style.boxShadow =
-                  "0 6px 20px rgba(224, 181, 111, 0.5)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background =
-                  "linear-gradient(to right, #e0b56f, #d4a055)";
-                e.currentTarget.style.boxShadow =
-                  "0 4px 15px rgba(224, 181, 111, 0.3)";
-              }}
+              className="group relative px-8 py-3 bg-transparent border-2 border-[#ff7f50] text-[#ff7f50] rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 hover:text-white"
             >
-              Book Now
+              <span className="relative z-10">Book Now</span>
+              <div className="absolute inset-0 bg-[#ff7f50] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </Link>
           </div>
 
           {/* Hamburger Button (mobile) */}
           <button
-            className="lg:hidden text-white text-2xl focus:outline-none hover:scale-110 transition-transform duration-200"
+            className="lg:hidden text-gray-800 text-2xl focus:outline-none hover:scale-110 transition-transform duration-200"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -161,49 +127,36 @@ function Header() {
 
       {/* Mobile Sidebar Overlay */}
       <div
-        className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={closeMobileMenu}
       ></div>
 
-      {/* Mobile Sidebar */}
+      {/* Mobile Sidebar - Original Style */}
       <aside
-        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-black via-gray-900 to-black z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
+        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white/95 backdrop-blur-md z-50 transform transition-transform duration-300 flex flex-col shadow-2xl lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
-        style={{ borderLeft: "1px solid rgba(224, 181, 111, 0.2)" }}
       >
         {/* Sidebar Header */}
-        <div
-          className="backdrop-blur-md text-white flex justify-between items-center p-6 shadow-md"
-          style={{
-            backgroundColor: "rgba(224, 181, 111, 0.1)",
-            borderBottom: "1px solid rgba(224, 181, 111, 0.2)",
-          }}
-        >
+        <div className="flex justify-between items-center p-6 border-b border-gray-300">
           <div className="flex items-center gap-3">
-            {/* Camera Logo */}
             <div>
               <img
                 src={cameraLogo}
                 alt="Chaskar Photography"
-                className="w-16 h-16 object-contain"
+                className="w-16 h-16 object-contain drop-shadow-lg"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
                 }}
               />
-              {/* Fallback icon */}
-              <FaCamera
-                className="text-3xl hidden"
-                style={{ color: "#e0b56f" }}
-              />
+              <FaCamera className="text-3xl hidden text-[#ff7f50]" />
             </div>
           </div>
           <button
-            className="text-2xl hover:rotate-90 transition-transform duration-300"
-            style={{ color: "#e0b56f" }}
+            className="text-2xl text-[#ff7f50] hover:rotate-90 transition-transform duration-300"
             onClick={closeMobileMenu}
             aria-label="Close menu"
           >
@@ -218,23 +171,7 @@ function Header() {
               key={item.name}
               to={item.href}
               onClick={closeMobileMenu}
-              className="p-4 rounded-lg backdrop-blur-sm text-white font-medium transition-all duration-200"
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
-                border: "1px solid rgba(224, 181, 111, 0.1)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor =
-                  "rgba(224, 181, 111, 0.1)";
-                e.currentTarget.style.borderColor = "rgba(224, 181, 111, 0.3)";
-                e.currentTarget.style.transform = "translateX(4px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor =
-                  "rgba(255, 255, 255, 0.05)";
-                e.currentTarget.style.borderColor = "rgba(224, 181, 111, 0.1)";
-                e.currentTarget.style.transform = "translateX(0)";
-              }}
+              className="p-4 rounded-xl text-gray-700 font-medium transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
             >
               {item.name.toUpperCase()}
             </Link>
@@ -242,51 +179,35 @@ function Header() {
         </nav>
 
         {/* Sidebar Footer */}
-        <div
-          className="p-6 backdrop-blur-md"
-          style={{
-            borderTop: "1px solid rgba(224, 181, 111, 0.2)",
-            backgroundColor: "rgba(255, 255, 255, 0.05)",
-          }}
-        >
+        <div className="p-6 border-t border-gray-300">
           <Link
             to="/contact"
             onClick={closeMobileMenu}
-            className="block w-full px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-center mb-4 text-black"
-            style={{
-              background: "linear-gradient(to right, #e0b56f, #d4a055)",
-              boxShadow: "0 4px 15px rgba(224, 181, 111, 0.3)",
-            }}
+            className="block w-full px-6 py-3 bg-[#ff7f50] text-white rounded-xl font-semibold text-center transition-all duration-300 hover:bg-[#ff6347] shadow-lg mb-4"
           >
             Book Your Session
           </Link>
 
-          <p className="text-gray-300 text-sm mb-3 text-center font-medium">
-            <FaCamera className="inline mr-2" style={{ color: "#e0b56f" }} />
+          <p className="text-gray-600 text-sm mb-3 text-center font-medium">
+            <FaCamera className="inline mr-2 text-[#ff7f50]" />
             Every Moment Tells a Story
           </p>
 
-          <div className="flex justify-center gap-6 text-white text-2xl">
+          <div className="flex justify-center gap-6 text-gray-700 text-2xl">
             <a
-              href="https://www.instagram.com/chaskar.photography"
+              href="https://www.instagram.com/chaskar.photography._/#"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all duration-300 hover:scale-125"
-              style={{ transition: "all 0.3s ease" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#e0b56f")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+              className="transition-all duration-300 hover:text-[#ff7f50] hover:scale-110"
               aria-label="Instagram"
             >
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919557867881"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all duration-300 hover:scale-125"
-              style={{ transition: "all 0.3s ease" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#e0b56f")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+              className="transition-all duration-300 hover:text-[#ff7f50] hover:scale-110"
               aria-label="WhatsApp"
             >
               <FaWhatsapp />
@@ -295,18 +216,12 @@ function Header() {
 
           {/* Contact Info */}
           <div className="mt-4 text-center">
-            <p className="text-gray-300 text-xs">
-              <FaWhatsapp
-                className="inline mr-1"
-                style={{ color: "#e0b56f" }}
-              />
-              +91 98765 43210
+            <p className="text-gray-600 text-xs">
+              <FaWhatsapp className="inline mr-1 text-[#ff7f50]" />
+              +91 9557867881
             </p>
-            <p className="text-gray-300 text-xs mt-1">
-              <FaInstagram
-                className="inline mr-1"
-                style={{ color: "#e0b56f" }}
-              />
+            <p className="text-gray-600 text-xs mt-1">
+              <FaInstagram className="inline mr-1 text-[#ff7f50]" />
               @chaskar.photography
             </p>
           </div>

@@ -42,14 +42,14 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff7f50]/10 border border-[#ff7f50]/30 rounded-full mb-6">
-            <div className="w-2 h-2 bg-[#ff7f50] rounded-full"></div>
-            <span className="text-[#ff7f50] text-sm font-semibold tracking-wider">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#e0b56f]/10 border border-[#e0b56f]/30 rounded-full mb-6">
+            <div className="w-2 h-2 bg-[#e0b56f] rounded-full"></div>
+            <span className="text-[#e0b56f] text-sm font-semibold tracking-wider">
               MY SERVICES
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             Professional{" "}
             <span className="bg-gradient-to-r from-[#ff6666] via-[#ffcc66] to-[#66ccff] bg-clip-text text-transparent animate-gradient">
               Photography
@@ -57,7 +57,7 @@ const ServicesSection = () => {
             Services
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             From wedding celebrations to commercial projects, I offer
             comprehensive photography services tailored to capture your unique
             story with creativity and technical excellence.
@@ -71,7 +71,7 @@ const ServicesSection = () => {
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="group relative overflow-hidden rounded-3xl cursor-pointer bg-gray-50 border border-gray-200 hover:border-[#ff7f50]/50 transition-all duration-500 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-3xl cursor-pointer bg-gray-800/50 border border-gray-700 hover:border-[#e0b56f]/50 transition-all duration-500 hover:shadow-2xl"
               style={{
                 height: "400px",
                 transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -103,7 +103,7 @@ const ServicesSection = () => {
                 <div
                   className="mb-4 transition-all duration-500"
                   style={{
-                    color: "#ff7f50",
+                    color: "#e0b56f",
                     transform:
                       hoveredIndex === index
                         ? "translateY(-10px) scale(1.1)"
@@ -144,7 +144,7 @@ const ServicesSection = () => {
                 className="absolute bottom-0 left-0 h-1 transition-all duration-500"
                 style={{
                   width: hoveredIndex === index ? "100%" : "0%",
-                  backgroundColor: "#ff7f50",
+                  backgroundColor: "#e0b56f",
                 }}
               />
             </div>
@@ -155,10 +155,10 @@ const ServicesSection = () => {
         <div className="text-center mt-16">
           <Link
             to="/services"
-            className="group relative inline-block px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[#ff7f50] text-[#ff7f50] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-white"
+            className="group relative inline-block px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-black w-full sm:w-auto text-center"
           >
             <span className="relative z-10">Explore All Services</span>
-            <div className="absolute inset-0 bg-[#ff7f50] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+            <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
           </Link>
         </div>
       </div>

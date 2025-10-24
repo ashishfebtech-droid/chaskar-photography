@@ -48,9 +48,18 @@ const AboutSection = () => {
       id="about"
     >
       <div className="relative max-w-7xl mx-auto px-4 md:px-6 z-10">
+        {/* Section Badge - Centered */}
+        <div className="flex justify-center mb-8 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#e0b56f]/10 border border-[#e0b56f]/30 rounded-full">
+            <div className="w-2 h-2 bg-[#e0b56f] rounded-full"></div>
+            <span className="text-[#e0b56f] text-sm font-semibold tracking-wider">
+              ABOUT CHASKAR
+            </span>
+          </div>
+        </div>
+
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Left Column - Sticky Image */}
           {/* Left Column - Sticky Image */}
           <div className="relative">
             <div className="lg:sticky lg:top-20 lg:max-h-[80vh]">
@@ -72,7 +81,7 @@ const AboutSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl"></div>
 
                   {/* Floating Element */}
-                  <div className="absolute -bottom-4 -right-4 bg-[#ff7f50] text-white p-4 sm:p-6 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110">
+                  <div className="absolute -bottom-4 -right-4 bg-[#e0b56f] text-black p-4 sm:p-6 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110">
                     <div className="text-xl sm:text-2xl font-bold">
                       {counters.years}+
                     </div>
@@ -82,13 +91,13 @@ const AboutSection = () => {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute -top-4 -left-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-[#ff7f50]/30 rounded-full"></div>
-                <div className="absolute -bottom-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 border-2 border-[#ff7f50]/20 rounded-full"></div>
+                <div className="absolute -top-4 -left-4 w-20 h-20 sm:w-24 sm:h-24 border-2 border-[#e0b56f]/30 rounded-full"></div>
+                <div className="absolute -bottom-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 border-2 border-[#e0b56f]/20 rounded-full"></div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Original Content */}
+          {/* Right Column - Content */}
           <div
             className={`space-y-6 md:space-y-8 transform transition-all duration-1000 delay-500 ${
               isVisible
@@ -96,16 +105,8 @@ const AboutSection = () => {
                 : "translate-x-10 opacity-0"
             }`}
           >
-            {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff7f50]/10 border border-[#ff7f50]/30 rounded-full">
-              <div className="w-2 h-2 bg-[#ff7f50] rounded-full"></div>
-              <span className="text-[#ff7f50] text-sm font-semibold tracking-wider">
-                ABOUT CHASKAR
-              </span>
-            </div>
-
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight text-center lg:text-left">
               Every Picture{" "}
               <span className="bg-gradient-to-r from-[#ff6666] via-[#ffcc66] to-[#66ccff] bg-clip-text text-transparent animate-gradient">
                 Tells
@@ -114,7 +115,7 @@ const AboutSection = () => {
             </h2>
 
             {/* Description */}
-            <div className="space-y-4 text-gray-600 text-base sm:text-lg leading-relaxed text-justify">
+            <div className="space-y-4 text-gray-400 text-base sm:text-lg leading-relaxed text-justify">
               <p>
                 I don't just take photos, I capture emotions, preserve memories,
                 and tell stories that last generations. With a passion for
@@ -129,32 +130,32 @@ const AboutSection = () => {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-6 pt-6">
-              <div className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:border-[#ff7f50]/50 transition-colors">
-                <div className="text-3xl font-bold text-[#ff7f50] mb-2">
+              <div className="text-center p-6 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-[#e0b56f]/50 transition-colors">
+                <div className="text-3xl font-bold text-[#e0b56f] mb-2">
                   {counters.clients}+
                 </div>
-                <div className="text-gray-600 text-sm font-medium">
+                <div className="text-gray-400 text-sm font-medium">
                   Happy Clients
                 </div>
               </div>
-              <div className="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:border-[#ff7f50]/50 transition-colors">
-                <div className="text-3xl font-bold text-[#ff7f50] mb-2">
+              <div className="text-center p-6 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-[#e0b56f]/50 transition-colors">
+                <div className="text-3xl font-bold text-[#e0b56f] mb-2">
                   {counters.shoots}+
                 </div>
-                <div className="text-gray-600 text-sm font-medium">
+                <div className="text-gray-400 text-sm font-medium">
                   Projects Done
                 </div>
               </div>
             </div>
 
-            {/* CTA Button */}
-            <div>
+            {/* CTA Button - Full width on mobile, centered */}
+            <div className="flex justify-center lg:justify-start">
               <Link
                 to="/portfolio"
-                className="group relative inline-block px-8 py-4 bg-transparent border-2 border-[#ff7f50] text-[#ff7f50] rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:text-white"
+                className="group relative inline-block px-8 py-4 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:text-black w-full lg:w-auto text-center"
               >
                 <span className="relative z-10">Explore My Journey</span>
-                <div className="absolute inset-0 bg-[#ff7f50] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
               </Link>
             </div>
           </div>

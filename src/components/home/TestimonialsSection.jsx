@@ -56,19 +56,19 @@ const TestimonialsSection = () => {
         <div className={`text-center mb-16 transform transition-all duration-1000 delay-300 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff7f50]/10 border border-[#ff7f50]/30 rounded-full mb-6">
-            <div className="w-2 h-2 bg-[#ff7f50] rounded-full"></div>
-            <span className="text-[#ff7f50] text-sm font-semibold tracking-wider">TESTIMONIALS</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#e0b56f]/10 border border-[#e0b56f]/30 rounded-full mb-6">
+            <div className="w-2 h-2 bg-[#e0b56f] rounded-full"></div>
+            <span className="text-[#e0b56f] text-sm font-semibold tracking-wider">TESTIMONIALS</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             What Our{" "}
             <span className="bg-gradient-to-r from-[#ff6666] via-[#ffcc66] to-[#66ccff] bg-clip-text text-transparent animate-gradient">
               Clients Say
             </span>
           </h2>
           
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Don't just take our word for it. Here's what our valued clients have to say about 
             their experience working with us and the results we delivered.
           </p>
@@ -81,37 +81,37 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className="group relative p-6 md:p-8 bg-gray-50 border border-gray-200 rounded-3xl transition-all duration-500 hover:border-[#ff7f50]/50 hover:bg-white hover:shadow-2xl"
+              className="group relative p-6 md:p-8 bg-gray-800/50 border border-gray-700 rounded-3xl transition-all duration-500 hover:border-[#e0b56f]/50 hover:bg-gray-800 hover:shadow-2xl"
             >
               {/* Quote Icon */}
-              <div className="absolute -top-3 -left-3 w-10 h-10 md:w-12 md:h-12 bg-[#ff7f50] rounded-2xl flex items-center justify-center">
-                <FaQuoteLeft className="w-4 h-4 md:w-5 md:h-5 text-white" />
+              <div className="absolute -top-3 -left-3 w-10 h-10 md:w-12 md:h-12 bg-[#e0b56f] rounded-2xl flex items-center justify-center">
+                <FaQuoteLeft className="w-4 h-4 md:w-5 md:h-5 text-black" />
               </div>
 
               {/* Rating Stars */}
               <div className="flex gap-1 mb-4 md:mb-6 justify-center">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <FaStar key={i} className="w-4 h-4 md:w-5 md:h-5 text-[#ff7f50]" />
+                  <FaStar key={i} className="w-4 h-4 md:w-5 md:h-5 text-[#e0b56f]" />
                 ))}
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-600 leading-relaxed mb-4 md:mb-6 text-base md:text-lg italic">
+              <p className="text-gray-400 leading-relaxed mb-4 md:mb-6 text-base md:text-lg italic">
                 "{testimonial.text}"
               </p>
 
               {/* Client Info */}
-              <div className="text-center border-t border-gray-200 pt-4 md:pt-6">
-                <h4 className="text-gray-900 font-semibold text-base md:text-lg mb-1">
+              <div className="text-center border-t border-gray-700 pt-4 md:pt-6">
+                <h4 className="text-white font-semibold text-base md:text-lg mb-1">
                   {testimonial.author}
                 </h4>
-                <p className="text-[#ff7f50] text-sm">
+                <p className="text-[#e0b56f] text-sm">
                   {testimonial.role}
                 </p>
               </div>
 
               {/* Hover Effect Border */}
-              <div className="absolute inset-0 border-2 border-transparent rounded-3xl group-hover:border-[#ff7f50]/20 transition-all duration-500"></div>
+              <div className="absolute inset-0 border-2 border-transparent rounded-3xl group-hover:border-[#e0b56f]/20 transition-all duration-500"></div>
             </div>
           ))}
         </div>
@@ -120,21 +120,21 @@ const TestimonialsSection = () => {
         <div className={`mt-12 md:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center transform transition-all duration-1000 delay-700 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}>
-          <div className="p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-2xl group hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-2xl md:text-3xl font-bold text-[#ff7f50] mb-2 group-hover:scale-110 transition-transform duration-300">386+</div>
-            <div className="text-gray-600 text-xs md:text-sm">Happy Clients</div>
+          <div className="p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-2xl group hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-2xl md:text-3xl font-bold text-[#e0b56f] mb-2 group-hover:scale-110 transition-transform duration-300">386+</div>
+            <div className="text-gray-400 text-xs md:text-sm">Happy Clients</div>
           </div>
-          <div className="p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-2xl group hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-2xl md:text-3xl font-bold text-[#ff7f50] mb-2 group-hover:scale-110 transition-transform duration-300">806+</div>
-            <div className="text-gray-600 text-xs md:text-sm">Projects Done</div>
+          <div className="p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-2xl group hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-2xl md:text-3xl font-bold text-[#e0b56f] mb-2 group-hover:scale-110 transition-transform duration-300">806+</div>
+            <div className="text-gray-400 text-xs md:text-sm">Projects Done</div>
           </div>
-          <div className="p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-2xl group hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-2xl md:text-3xl font-bold text-[#ff7f50] mb-2 group-hover:scale-110 transition-transform duration-300">5.0</div>
-            <div className="text-gray-600 text-xs md:text-sm">Average Rating</div>
+          <div className="p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-2xl group hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-2xl md:text-3xl font-bold text-[#e0b56f] mb-2 group-hover:scale-110 transition-transform duration-300">5.0</div>
+            <div className="text-gray-400 text-xs md:text-sm">Average Rating</div>
           </div>
-          <div className="p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-2xl group hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-2xl md:text-3xl font-bold text-[#ff7f50] mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
-            <div className="text-gray-600 text-xs md:text-sm">Satisfaction Rate</div>
+          <div className="p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-2xl group hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-2xl md:text-3xl font-bold text-[#e0b56f] mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
+            <div className="text-gray-400 text-xs md:text-sm">Satisfaction Rate</div>
           </div>
         </div>
 
@@ -142,17 +142,17 @@ const TestimonialsSection = () => {
         <div className={`text-center mt-12 transform transition-all duration-1000 delay-900 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}>
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 p-6 sm:p-8 bg-gray-50 border border-gray-200 rounded-2xl max-w-2xl mx-auto hover:shadow-lg transition-all duration-300">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 p-6 sm:p-8 bg-gray-800/50 border border-gray-700 rounded-2xl max-w-2xl mx-auto hover:shadow-lg transition-all duration-300 w-full sm:w-auto">
             <div className="text-center sm:text-left">
-              <h4 className="text-gray-900 font-semibold text-lg sm:text-xl mb-2">Join Our Happy Clients</h4>
-              <p className="text-gray-600 text-sm sm:text-base">Let's create beautiful memories together</p>
+              <h4 className="text-white font-semibold text-lg sm:text-xl mb-2">Join Our Happy Clients</h4>
+              <p className="text-gray-400 text-sm sm:text-base">Let's create beautiful memories together</p>
             </div>
             <Link
               to="/contact"
-              className="group relative inline-block px-6 sm:px-8 py-3 bg-transparent border-2 border-[#ff7f50] text-[#ff7f50] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-white whitespace-nowrap"
+              className="group relative inline-block px-6 sm:px-8 py-3 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-black whitespace-nowrap w-full sm:w-auto text-center"
             >
               <span className="relative z-10">Book Your Session</span>
-              <div className="absolute inset-0 bg-[#ff7f50] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+              <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </Link>
           </div>
         </div>

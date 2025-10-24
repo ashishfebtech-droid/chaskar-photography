@@ -74,7 +74,7 @@ const HeroSection = () => {
     (i - currentIndex + imagesData.length) % imagesData.length;
 
   return (
-    <div className="relative bg-transparent text-gray-900">
+    <div className="relative bg-transparent text-white">
       {/* HERO SECTION */}
       <section
         className={`min-h-screen flex flex-col items-center justify-center px-4 md:px-5 pt-32 sm:pt-24 md:pt-24 pb-16 md:pb-24 transition-all duration-1000 ${
@@ -87,7 +87,7 @@ const HeroSection = () => {
             isVisible ? "translate-y-0" : "translate-y-10"
           }`}
         >
-          <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full bg-white border-4 sm:border-6 md:border-8 border-gray-300 shadow-xl flex items-center justify-center overflow-hidden">
+          <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full bg-gray-800 border-4 sm:border-6 md:border-8 border-[#e0b56f]/30 shadow-xl flex items-center justify-center overflow-hidden">
             <img
               src="images/CHAKAR LOGO.png"
               alt="Chaskar Photography Logo"
@@ -103,13 +103,13 @@ const HeroSection = () => {
           }`}
         >
           <h1 className="text-2xl sm:text-3xl md:text-6xl mb-4 md:mb-8 leading-tight">
-            <span className="italic text-gray-700">Hello,</span>{" "}
+            <span className="italic text-gray-300">Hello,</span>{" "}
             <span className="font-bold bg-gradient-to-r from-[#ff6666] via-[#ffcc66] to-[#66ccff] bg-clip-text text-transparent animate-gradient">
               I am Chaskar!
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-xl text-gray-600 leading-relaxed mb-6 md:mb-12">
+          <p className="text-sm sm:text-base md:text-xl text-gray-400 leading-relaxed mb-6 md:mb-12">
             I believe every moment tells a story. My photography captures the
             essence of life through the lens of authenticity and artistry,
             creating timeless memories that speak to the soul.
@@ -119,15 +119,15 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               to="/portfolio"
-              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[#ff7f50] text-[#ff7f50] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-white w-full sm:w-auto"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:text-black w-full sm:w-auto"
             >
               <span className="relative z-10">View My Work</span>
-              <div className="absolute inset-0 bg-[#ff7f50] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+              <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </Link>
 
             <Link
               to="/contact#contact"
-              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-[#ff7f50] border-2 border-[#ff7f50] text-white rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-[#ff7f50] w-full sm:w-auto"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-[#e0b56f] border-2 border-[#e0b56f] text-black rounded-xl font-semibold text-sm sm:text-base overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-[#e0b56f] w-full sm:w-auto"
             >
               <span className="relative z-10">Get in Touch</span>
               <div className="absolute inset-0 bg-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
@@ -157,7 +157,7 @@ const HeroSection = () => {
                   alt={`Photography ${currentIndex + 1}`}
                   className="w-full h-full object-cover animate-fadeIn"
                 />
-                <div className="absolute inset-4 border-2 border-gray-400 rounded-xl shadow-inner pointer-events-none animate-pulse-slow"></div>
+                <div className="absolute inset-4 border-2 border-[#e0b56f]/50 rounded-xl shadow-inner pointer-events-none animate-pulse-slow"></div>
               </div>
             ) : (
               imagesData.map((img, index) => {
@@ -193,7 +193,7 @@ const HeroSection = () => {
                       className="w-full h-full object-cover"
                     />
                     {pos === 2 && (
-                      <div className="absolute inset-4 border-2 border-gray-300 rounded-xl shadow-inner pointer-events-none animate-pulse-slow"></div>
+                      <div className="absolute inset-4 border-2 border-[#e0b56f]/50 rounded-xl shadow-inner pointer-events-none animate-pulse-slow"></div>
                     )}
                   </div>
                 );
@@ -209,8 +209,8 @@ const HeroSection = () => {
               key={index}
               className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                 index === currentIndex
-                  ? "bg-[#ff7f50] scale-125"
-                  : "bg-gray-400/40 hover:bg-gray-600/50"
+                  ? "bg-[#e0b56f] scale-125"
+                  : "bg-gray-600/40 hover:bg-gray-500/50"
               }`}
               onClick={() => {
                 handleManualInteraction();

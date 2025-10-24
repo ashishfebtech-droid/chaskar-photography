@@ -76,19 +76,19 @@ const WhyChooseUsSection = () => {
         <div className={`text-center mb-12 md:mb-16 transition-all duration-1000 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff7f50]/10 border border-[#ff7f50]/30 rounded-full mb-6">
-            <div className="w-2 h-2 bg-[#ff7f50] rounded-full"></div>
-            <span className="text-[#ff7f50] text-sm font-semibold tracking-wider">WHY CHOOSE US</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#e0b56f]/10 border border-[#e0b56f]/30 rounded-full mb-6">
+            <div className="w-2 h-2 bg-[#e0b56f] rounded-full"></div>
+            <span className="text-[#e0b56f] text-sm font-semibold tracking-wider">WHY CHOOSE US</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             The Compelling Reasons To{" "}
             <span className="bg-gradient-to-r from-[#ff6666] via-[#ffcc66] to-[#66ccff] bg-clip-text text-transparent animate-gradient">
               Select Our Photography
             </span>
           </h2>
           
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             We combine technical expertise with artistic vision to deliver exceptional photography 
             experiences that exceed expectations and create lasting memories.
           </p>
@@ -99,7 +99,7 @@ const WhyChooseUsSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`group relative p-4 sm:p-6 md:p-8 bg-gray-50 border border-gray-200 rounded-2xl md:rounded-3xl transition-all duration-500 hover:border-[#ff7f50]/50 hover:bg-white hover:shadow-lg md:hover:shadow-2xl md:hover:scale-105 ${
+              className={`group relative p-4 sm:p-6 md:p-8 bg-gray-800/50 border border-gray-700 rounded-2xl md:rounded-3xl transition-all duration-500 hover:border-[#e0b56f]/50 hover:bg-gray-800 hover:shadow-lg md:hover:shadow-2xl md:hover:scale-105 ${
                 isVisible 
                   ? "translate-y-0 opacity-100" 
                   : "translate-y-10 opacity-0"
@@ -110,26 +110,26 @@ const WhyChooseUsSection = () => {
               }}
             >
               {/* Background Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ff7f50]/5 to-transparent rounded-2xl md:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e0b56f]/5 to-transparent rounded-2xl md:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               {/* Icon Container */}
               <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-[#ff7f50] text-white rounded-xl md:rounded-2xl mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-[#e0b56f] text-black rounded-xl md:rounded-2xl mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 group-hover:text-[#ff7f50] transition-colors duration-300">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 md:mb-4 group-hover:text-[#e0b56f] transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed text-xs sm:text-sm md:text-base">
+                <p className="text-gray-400 leading-relaxed text-xs sm:text-sm md:text-base">
                   {feature.description}
                 </p>
               </div>
 
               {/* Hover Border Effect */}
-              <div className="absolute inset-0 border-2 border-transparent rounded-2xl md:rounded-3xl group-hover:border-[#ff7f50]/20 transition-all duration-500"></div>
+              <div className="absolute inset-0 border-2 border-transparent rounded-2xl md:rounded-3xl group-hover:border-[#e0b56f]/20 transition-all duration-500"></div>
             </div>
           ))}
         </div>
@@ -138,21 +138,21 @@ const WhyChooseUsSection = () => {
         <div className={`mt-8 md:mt-12 lg:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 text-center transition-all duration-1000 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}>
-          <div className="p-3 sm:p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-xl md:rounded-2xl hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff7f50] mb-1 sm:mb-2">100%</div>
-            <div className="text-gray-600 text-xs sm:text-sm">Client Satisfaction</div>
+          <div className="p-3 sm:p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-xl md:rounded-2xl hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e0b56f] mb-1 sm:mb-2">100%</div>
+            <div className="text-gray-400 text-xs sm:text-sm">Client Satisfaction</div>
           </div>
-          <div className="p-3 sm:p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-xl md:rounded-2xl hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff7f50] mb-1 sm:mb-2">500+</div>
-            <div className="text-gray-600 text-xs sm:text-sm">Projects Completed</div>
+          <div className="p-3 sm:p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-xl md:rounded-2xl hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e0b56f] mb-1 sm:mb-2">500+</div>
+            <div className="text-gray-400 text-xs sm:text-sm">Projects Completed</div>
           </div>
-          <div className="p-3 sm:p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-xl md:rounded-2xl hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff7f50] mb-1 sm:mb-2">8+</div>
-            <div className="text-gray-600 text-xs sm:text-sm">Years Experience</div>
+          <div className="p-3 sm:p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-xl md:rounded-2xl hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e0b56f] mb-1 sm:mb-2">8+</div>
+            <div className="text-gray-400 text-xs sm:text-sm">Years Experience</div>
           </div>
-          <div className="p-3 sm:p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-xl md:rounded-2xl hover:border-[#ff7f50]/50 transition-all duration-300 hover:shadow-lg">
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#ff7f50] mb-1 sm:mb-2">24/7</div>
-            <div className="text-gray-600 text-xs sm:text-sm">Customer Support</div>
+          <div className="p-3 sm:p-4 md:p-6 bg-gray-800/50 border border-gray-700 rounded-xl md:rounded-2xl hover:border-[#e0b56f]/50 transition-all duration-300 hover:shadow-lg">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e0b56f] mb-1 sm:mb-2">24/7</div>
+            <div className="text-gray-400 text-xs sm:text-sm">Customer Support</div>
           </div>
         </div>
 
@@ -160,17 +160,17 @@ const WhyChooseUsSection = () => {
         <div className={`text-center mt-8 md:mt-12 transition-all duration-1000 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}>
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6 p-4 sm:p-6 md:p-8 bg-gray-50 border border-gray-200 rounded-xl md:rounded-2xl max-w-2xl mx-auto hover:shadow-lg transition-all duration-300">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6 p-4 sm:p-6 md:p-8 bg-gray-800/50 border border-gray-700 rounded-xl md:rounded-2xl max-w-2xl mx-auto hover:shadow-lg transition-all duration-300 w-full sm:w-auto">
             <div className="text-center sm:text-left">
-              <h4 className="text-gray-900 font-semibold text-base sm:text-lg md:text-xl mb-1 sm:mb-2">Ready to Experience the Difference?</h4>
-              <p className="text-gray-600 text-xs sm:text-sm md:text-base">Let's create something extraordinary together</p>
+              <h4 className="text-white font-semibold text-base sm:text-lg md:text-xl mb-1 sm:mb-2">Ready to Experience the Difference?</h4>
+              <p className="text-gray-400 text-xs sm:text-sm md:text-base">Let's create something extraordinary together</p>
             </div>
             <Link
               to="/contact"
-              className="group relative inline-block px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-transparent border-2 border-[#ff7f50] text-[#ff7f50] rounded-lg md:rounded-xl font-semibold text-xs sm:text-sm md:text-base overflow-hidden transition-all duration-300 hover:text-white whitespace-nowrap"
+              className="group relative inline-block px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-transparent border-2 border-[#e0b56f] text-[#e0b56f] rounded-lg md:rounded-xl font-semibold text-xs sm:text-sm md:text-base overflow-hidden transition-all duration-300 hover:text-black whitespace-nowrap w-full sm:w-auto text-center"
             >
               <span className="relative z-10">Start Your Project</span>
-              <div className="absolute inset-0 bg-[#ff7f50] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+              <div className="absolute inset-0 bg-[#e0b56f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </Link>
           </div>
         </div>

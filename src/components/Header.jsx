@@ -67,43 +67,45 @@ function Header() {
             : "-translate-y-full opacity-0"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo - Left Side */}
-          <Link to="/" className="flex items-center group mr-8">
+          <Link to="/" className="flex items-center group">
             <div className="transition-all duration-500 group-hover:scale-110">
               <img
                 src={cameraLogo}
                 alt="Chaskar Photography"
-                className="w-14 h-14 object-contain drop-shadow-2xl"
+                className="w-20 h-20 object-contain drop-shadow-2xl"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
                 }}
               />
-              <FaCamera className="text-4xl hidden text-[#e0b56f]" />
+              <FaCamera className="text-5xl hidden text-[#e0b56f]" />
             </div>
           </Link>
 
-          {/* Desktop Nav - Left Aligned */}
-          <nav className="hidden lg:flex gap-4">
+          {/* Desktop Nav - Center Aligned */}
+          <nav className="hidden lg:flex gap-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className="group relative px-6 py-3 font-medium text-white/90 rounded-xl transition-all duration-500 hover:text-[#e0b56f] border-2 border-transparent hover:border-[#e0b56f] hover:bg-[#e0b56f]/10"
+                className="group relative px-6 py-3 font-medium text-white/90 rounded-xl transition-all duration-500 hover:text-[#e0b56f]"
               >
                 <span className="text-sm font-semibold uppercase tracking-wider relative z-10">
                   {item.name}
                 </span>
+                {/* Hover Underline Effect */}
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#e0b56f] transition-all duration-300 transform -translate-x-1/2 group-hover:w-4/5 rounded-full"></span>
               </Link>
             ))}
           </nav>
 
           {/* CTA Button - Right Side */}
-          <div className="hidden lg:flex items-center gap-4 ml-auto">
+          <div className="hidden lg:flex items-center gap-4">
             <Link
               to="/contact"
-              className="px-6 py-3 bg-[#e0b56f] text-black rounded-xl font-bold text-sm border-2 border-[#e0b56f] transition-all duration-300 hover:bg-transparent hover:text-[#e0b56f]"
+              className="px-8 py-3 bg-[#e0b56f] text-black rounded-xl font-bold text-sm transition-all duration-300 hover:bg-transparent hover:text-[#e0b56f] border-2 border-[#e0b56f]"
             >
               Book Now
             </Link>
@@ -111,7 +113,7 @@ function Header() {
 
           {/* Hamburger Button (mobile) - Right Side */}
           <button
-            className="lg:hidden w-12 h-12 bg-[#e0b56f]/20 border-2 border-[#e0b56f]/30 text-[#e0b56f] rounded-xl flex items-center justify-center hover:bg-[#e0b56f] hover:text-black transition-all duration-300 ml-auto"
+            className="lg:hidden w-12 h-12 bg-[#e0b56f]/20 border-2 border-[#e0b56f]/30 text-[#e0b56f] rounded-xl flex items-center justify-center hover:bg-[#e0b56f] hover:text-black transition-all duration-300"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -128,7 +130,7 @@ function Header() {
         onClick={closeMobileMenu}
       ></div>
 
-      {/* Mobile Sidebar */}
+      {/* Mobile Sidebar - Right Side */}
       <aside
         className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-gradient-to-b from-black to-gray-900 z-50 transform transition-all duration-500 flex flex-col shadow-2xl border-l border-[#e0b56f]/30 lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -141,13 +143,13 @@ function Header() {
               <img
                 src={cameraLogo}
                 alt="Chaskar Photography"
-                className="w-12 h-12 object-contain drop-shadow-2xl"
+                className="w-16 h-16 object-contain drop-shadow-2xl"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
                 }}
               />
-              <FaCamera className="text-3xl hidden text-[#e0b56f]" />
+              <FaCamera className="text-4xl hidden text-[#e0b56f]" />
             </div>
           </div>
           <button
@@ -159,14 +161,14 @@ function Header() {
           </button>
         </div>
 
-        {/* Navigation Links - Left Aligned */}
+        {/* Navigation Links - With Golden Border */}
         <nav className="flex flex-col p-4 gap-3 flex-1 overflow-y-auto">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.href}
               onClick={closeMobileMenu}
-              className="p-4 rounded-xl text-white/90 font-medium transition-all duration-300 hover:text-[#e0b56f] border-2 border-transparent hover:border-[#e0b56f] hover:bg-[#e0b56f]/10 text-left"
+              className="p-4 rounded-xl text-white/90 font-medium transition-all duration-300 hover:text-[#e0b56f] border-2 border-[#e0b56f]/30 hover:border-[#e0b56f] hover:bg-[#e0b56f]/10 text-left"
             >
               <span className="text-sm font-semibold uppercase tracking-wider">
                 {item.name}

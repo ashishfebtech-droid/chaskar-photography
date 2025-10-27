@@ -8,8 +8,11 @@ import ContactPage from "./pages/Contact";
 import ServicesPage from "./pages/Services";
 import AboutPage from "./pages/About";
 import WhatsAppButton from "./components/WhatsAppButton";
+import { useLenis } from "./hooks/useLenis";
+import "lenis/dist/lenis.css";
 
 function App() {
+  useLenis();
   return (
     <HashRouter>
       <ScrollToTop />
